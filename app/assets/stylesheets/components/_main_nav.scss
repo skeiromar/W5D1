@@ -1,29 +1,44 @@
 .main-nav {
     display: flex;  
     justify-content: space-between;
-    padding: 10px;
+    padding: 10px 0;
+    
+    border-bottom: 1px solid $light-gray;
+
+    align-items: center;
+    // margin: 10px 0;
+
 }
 
 .left-nav > ul,
 .right-nav > ul {
     display: flex; 
+    font-family: $serif; 
     align-items: center;
-    font-family: papyrus; 
-    font-size: 20px;
-    text-transform: uppercase; 
-
+    margin-bottom: 10px;
+    
 }
 
 .left-nav > ul > li {
-
+    margin-left: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: $sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 10px;
+    transition: 0.4s;
 }
 
 .right-nav > ul > li  {
-
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 0.4s;
 }
 
 .right-nav > ul > li:last-of-type {
-
+    position: relative;
+    padding: 10px;
 }
 
 .left-nav > ul > li:hover,
@@ -32,11 +47,23 @@
 }
 
 .left-nav span {
-
+    margin-left: 8px;
 }
 
 
 .right-nav i {
-    margin: 10px;
-    font-size: 200px;
+    // margin: 10px;
+    font-size: 18px;
+}
+
+@media all and (max-width: 1000px) {
+  .right-nav button {
+  	display: none;
+  }
+  .left-nav > ul > li {
+  	margin: 0;
+  }
+  .main-nav {
+  	padding: 20px 0;
+  }
 }
